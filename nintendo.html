@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TheQuestionGaming</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Question.css">
+<script src="modernizr.custom.65897.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<header>
+<h1>The Question Gaming: What's my Console?</h1>
+<nav>
+	<a href="index.html">HOME</a>
+	<a href="xbox.html">XBOX</a>
+	<a href="playstation.html">Playstation</a>
+	<a href="nintendo.html">Nintendo</a>
+        <a href="safety.html">Safety</a>
+	<a href="calculate.html"> Mini Game</a>
+</nav>
+</header>
+<main>
+<div id="NintendoMain">
+</div>
+<h2>Nintendo - Startup</h2>
+   <article>
+      <h2>Choose your console version and accessories to see how much you need to start gaming:</h2>
+      <form>
+         <input type="checkbox" id="item1" value="350" />
+         <label for="item1">Nintendo Switch OLED ($350)</label>
+         <input type="checkbox" id="item2" value="300" />
+         <label for="item2">Nintendo Switch ($300)</label>
+         <input type="checkbox" id="item3" value="80" />
+         <label for="item3">Controller ($80)</label>
+         <input type="checkbox" id="item4" value="20" />
+         <label for="item4">System Case ($20)</label>
+         <input type="checkbox" id="item5" value="60" />
+         <label for="item5">Game ($60)</label>
+	 <input type="checkbox" id="item6" value="30" />
+         <label for="item6">Control Charge Station ($30)</label>
+         <input type="submit" id="submit" value="Submit" />
+      </form>
+   </article>
+   <script>
+      function calcTotal() {
+         var itemTotal = 0;
+         var item1 = document.getElementById("item1");
+         var item2 = document.getElementById("item2");
+         var item3 = document.getElementById("item3");
+         var item4 = document.getElementById("item4");
+         var item5 = document.getElementById("item5");
+         var item6 = document.getElementById("item6");
+         (item1.checked) ? (itemTotal += 350) : (itemTotal += 0);
+         (item2.checked) ? (itemTotal += 300) : (itemTotal += 0);
+         (item3.checked) ? (itemTotal += 80) : (itemTotal += 0);
+         (item4.checked) ? (itemTotal += 20) : (itemTotal += 0);
+         (item5.checked) ? (itemTotal += 60) : (itemTotal += 0);
+         (item6.checked) ? (itemTotal += 30) : (itemTotal += 0);
+         var salesTaxRate = 0.07;
+         var orderTotal = itemTotal + (itemTotal * salesTaxRate);
+         alert("Your order total is $" + orderTotal);
+      }
+      document.getElementById("submit").
+         addEventListener("click", calcTotal, false);
+   </script>
+<h3> Nintendo Switch Pros and Cons
+</h3>
+<p> The Pros
+<ul>
+	<li>Price: Literally the cheapest of the big three consoles at $300.</li>
+	<li>The Games: Exclusive games and is the most group oriented of all the consoles. Fun for friends and family.</li>
+	<li>Features: Motion controls, tons of control add-ons and fun accessories and the console is also a HANDHELD!</li>
+</ul>
+<p> The Cons
+<ul>
+	<li>Controls: The controllers motion stick stops working pretty often and isnt that easy to fix. Will always be buying new controls.</li>
+	<li>No Chat: The consoles doesn't have a built in way to talk with friends so communication is usually text or preselected phrases.</li>
+	<li>Battery life: The console dies the batteries die, everything is always dead unless you have it forever plugged in.</li>
+</ul>
+</div>
+</body>
+</html>
